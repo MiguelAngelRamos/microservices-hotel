@@ -2,7 +2,7 @@ server:
   port: 8082
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/microservices
+    url: jdbc:postgresql://localhost:5432/microservicios
     username: postgres
     password: academyjava
   jpa:
