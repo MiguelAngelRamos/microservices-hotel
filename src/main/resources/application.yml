@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: ${PORT:${SERVER_PORT:0}}
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/microservicios
@@ -11,11 +11,5 @@ spring:
     show-sql: true
   application:
     name: HOTEL-SERVICE
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      defaultZone: http://localhost:8761/eureka
+  config:
+    import: optional:configserver:http://localhost:8085
